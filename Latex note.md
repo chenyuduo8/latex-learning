@@ -1,5 +1,6 @@
 # 第一章 latex基本概念
 ## 1.1 概述
+---
 * 具有专业的排版输出能力，产生的文档看上去就像“印刷品”一样。
 * 具有方便而强大的数学公式排版能力，无出其右者。
 * 绝大多数时候，用户只需专注于一些组织文档结构的基础命令，无需（或很少）操心文档的版面设计。
@@ -7,6 +8,8 @@
 * 强大的可扩展性。世界各地的人开发了数以千计的LATEX 宏包用于补充和扩展LATEX 的功能。
 *　能够促使用户写出结构良好的文档——而这也是LATEX 存在的初衷。
 * LATEX 和TEX 及相关软件是跨平台、免费、开源的。无论用户使用的是Windows，macOS（OS X），GNU/Linux 还是FreeBSD 等操作系统，都能轻松获得和使用这一强大的排版工具，并且获得稳定的输出。
+---
+
 安装:
 `texlive`:
 [官网](https://tug.org/texlive/)
@@ -14,6 +17,8 @@
 [tex studio](https://www.texstudio.org/)
 在线:[overleaf](https://www.overleaf.com/)
 vscode/vim
+
+---
 ## 1.2 第一次使用
 下面为最短的latex源代码示例
 ```tex
@@ -22,10 +27,13 @@ vscode/vim
 ``Hello world!'' 
 \end{document}
 ```
+---
+
 ## 1.3 latex 命令和代码结构
 LATEX 中命令以反斜线`\ `开头，为以下两种形式之一：
 • 反斜线和后面的一串字母，如`\LaTeX` 。它们以任意非字母符号（空格、数字、标点等）为界限。
 • 反斜线和后面的单个非字母符号，如`\$` 。
+---
 ## 1.4 宏包和文档类
 ### 文档类
 ```
@@ -58,6 +66,8 @@ options:
 
 ## 1.5 用到的文件一览
 ![[Pasted image 20230712201645.png]]
+
+---
 ## 1.6 文件的组织方式
 编写长篇文档时,将每章的内容单独写在一个文件夹
 在源代码中插入文件
@@ -69,7 +79,7 @@ options:
 \include{/home/Bob/file} % *nix（包含Linux、macOS）绝对路径
 \include{D:/file} % Windows 绝对路径，用正斜线
 ```
-
+---
 ## 1.7 latex和tex相关概念
 **`引擎`** :全称为排版引擎，是编译源代码并生成文档的程序，如pdfTEX、XƎTEX 等。有时也称为编译器。
 **`格式`**:是定义了一组命令的代码集。LATEX 就是最广泛应用的一个格式，高德纳本人还编写了一个简单的plain TEX 格式，没有定义诸如`\documentclass` 和`\section`等等命令。
@@ -433,7 +443,7 @@ pages = {114-120}}
 现在利用bibtex数据库生成参考文献和引用:
 1. 准备一份bibtex文件,假设文件名为books.bib,和latex源代码位于同一目录
 2. 在正文应用参考文献
-3. \bibliography
+3.` \bibliography`
 ## 使用超链接
 ```tex
 \usepackage{hyperref}
